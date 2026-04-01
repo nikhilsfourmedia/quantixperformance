@@ -1,0 +1,161 @@
+"use client";
+import SideMenu from "./component/SideMenu";
+import MobileNav from "./component/MobileNav";
+import MobileMenuSocials from "./component/MobileMenuSocials";
+import Nav from "./component/Nav";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Header4() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  useEffect(() => {
+    const handleDocumentClick = (event) => {
+      const menuWrapper = document.querySelector(".mobile-menu-wrapper");
+      const menuContainer = document.querySelector(".mobile-menu-area");
+
+      // Check if the click is outside of modal-content but inside modal-dialog
+      if (
+        menuWrapper &&
+        menuContainer &&
+        !menuContainer.contains(event.target) &&
+        menuWrapper.contains(event.target)
+      ) {
+        // Your logic for handling the click outside modal-content
+        setMobileMenuOpen(false);
+      }
+    };
+
+    // Attach the event listener when the component mounts
+    document.addEventListener("click", handleDocumentClick);
+
+    // Detach the event listener when the component unmounts
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, []); // Empty dependency array ensures the effect runs once after the initial render
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 500);
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  return (
+    <>
+      <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+
+      {/* Mobile Menu */}
+
+      <div
+        className={`mobile-menu-wrapper ${mobileMenuOpen ? "body-visible" : ""
+          } `}
+      >
+        <div className="mobile-menu-area">
+          <button
+            className="menu-toggle"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <i className="fas fa-times"></i>
+          </button>
+          <div className="mobile-logo">
+            <Link scroll={false} href="/">
+              <Image
+                width={86}
+                height={24}
+                src="/assets/img/logo.png"
+                alt="Quantix Performance"
+              />
+            </Link>
+          </div>
+          <div className="mobile-menu">
+            <ul>
+              <MobileNav />
+            </ul>
+          </div>
+          <div className="sidebar-wrap">
+            <h6>Golden Court, Shop 217, Above Zudio</h6>
+            <h6>Hills and Dales, Undri, Pune, India</h6>
+          </div>
+          <div className="sidebar-wrap">
+            <h6>
+              <a href="mailto:hello@quantixperformance.com">
+                hello@quantixperformance.com
+              </a>
+            </h6>
+            <h6>
+              <Link scroll={false} href="/contact">
+                Book a consultation
+              </Link>
+            </h6>
+          </div>
+          <div className="social-btn style3">
+            <MobileMenuSocials />
+          </div>
+        </div>
+      </div>
+
+      <header className="nav-header header-layout2">
+        <div className={`sticky-wrapper ${isScrolled ? "header-sticky" : ""} `}>
+          <div className="menu-area">
+            <div className="container-fluid">
+              <div className="row align-items-center justify-content-between">
+                <div className="col-auto">
+                  <div className="header-logo">
+                    <Link scroll={false} href="/">
+                      <Image
+                        width={250}
+                        height={70}
+                        src="/assets/img/logo-white.svg"
+                        alt="logo"
+                      />
+                    </Link>
+                  </div>
+                </div>
+                <div className="col-auto m-lg-auto">
+                  <nav className="main-menu d-none d-lg-inline-block">
+                    <ul>
+                      {" "}
+                      <Nav />
+                    </ul>
+                  </nav>
+                  <div className="navbar-right d-inline-flex d-lg-none">
+                    <button
+                      onClick={() => setMobileMenuOpen(true)}
+                      type="button"
+                      className="menu-toggle sidebar-btn"
+                    >
+                      <span className="line"></span>
+                      <span className="line"></span>
+                      <span className="line"></span>
+                    </button>
+                  </div>
+                </div>
+                <div className="col-auto d-none d-lg-block">
+                  <div className="header-button ms-0">
+                    <Link scroll={false} href="/contact" className="btn text-white" style={{ color: "white" }}>
+                      <span className="link-effect">
+                        <span className="effect-1">CONTACT US</span>
+                        <span className="effect-1">CONTACT US</span>
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </>
+  );
+}
