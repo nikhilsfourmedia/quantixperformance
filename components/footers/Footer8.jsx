@@ -66,8 +66,8 @@ export default function Footer8() {
                     Hills and Dales, Undri, Pune, India
                   </li>
                   <li>
-                    <a href="mailto:hello@quantixperformance.com">
-                      hello@quantixperformance.com
+                    <a href="mailto:hello@quantixperf.com">
+                      hello@quantixperf.com
                     </a>
                     <br />
                     <Link scroll={false} href="/contact">

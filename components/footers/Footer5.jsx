@@ -83,8 +83,8 @@ export default function Footer5() {
             </div>
             <div className="col-md-6 align-self-center text-md-end">
               <p className="copyright-text">
-                <a href="mailto:hello@quantixperformance.com">
-                  hello@quantixperformance.com
+                <a href="mailto:hello@quantixperf.com">
+                  hello@quantixperf.com
                 </a>
                 <br />
                 <Link scroll={false} href="/contact">

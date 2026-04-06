@@ -46,8 +46,8 @@ export default function SideMenu({ isOpen, setIsOpen }) {
             </div>
             <div className="sidebar-wrap">
               <h6>
-                <a href="mailto:hello@quantixperformance.com">
-                  hello@quantixperformance.com
+                <a href="mailto:hello@quantixperf.com">
+                  hello@quantixperf.com
                 </a>
               </h6>
               <h6>

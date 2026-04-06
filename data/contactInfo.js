@@ -10,8 +10,8 @@ export const contactInfo = [
     iconSrc: "/assets/img/icon/speech-bubble.svg",
     title: "Email",
     text: "Send your brief or questions and we will respond with clear timelines and expectations.",
-    linkText: "hello@quantixperformance.com",
-    linkUrl: "mailto:hello@quantixperformance.com",
+    linkText: "hello@quantixperf.com",
+    linkUrl: "mailto:hello@quantixperf.com",
   },
 ];
 export const contactInfo2 = [
@@ -27,8 +27,8 @@ export const contactInfo2 = [
   {
     iconSrc: "/assets/img/icon/speech-bubble.svg",
     title: "Email",
-    email: "hello@quantixperformance.com",
-    linkUrl: "mailto:hello@quantixperformance.com",
+    email: "hello@quantixperf.com",
+    linkUrl: "mailto:hello@quantixperf.com",
     linkText: "Send message",
   },
   {
