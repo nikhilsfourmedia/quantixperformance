@@ -18,7 +18,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div>
+    <div className="home-5-theme">
       <SearchPopup />
       <Header4 />
       <Hero />

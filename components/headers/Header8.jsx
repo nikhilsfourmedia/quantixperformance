@@ -191,8 +191,8 @@ export default function Header8() {
                     </Link>
                     <Link href={`/project`} className="btn">
                       <span className="link-effect">
-                        <span className="effect-1">WORKS WITH US</span>
-                        <span className="effect-1">WORKS WITH US</span>
+                        <span className="effect-1">Work with us</span>
+                        <span className="effect-1">Work with us</span>
                       </span>
                     </Link>
                   </div>

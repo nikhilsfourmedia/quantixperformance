@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="brand-theme">
       <Header3 />
       <Breadcumb />
       <Facts />
@@ -29,7 +29,7 @@ export default function AboutPage() {
       <Contact />
       {/* <Clients /> */}
       <MarqueeComponent />
-      <Footer5 />
-    </>
+       <Footer5 />
+    </div>
   );
 }

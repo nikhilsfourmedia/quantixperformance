@@ -1,5 +1,5 @@
 import MarqueeComponent from "@/components/common/Marquee";
-import Footer8 from "@/components/footers/Footer8";
+import Footer5 from "@/components/footers/Footer5";
 import Header3 from "@/components/headers/Header3";
 import Breadcumb from "@/components/service/Breadcumb";
 import Clients from "@/components/service/Clients";
@@ -19,7 +19,7 @@ export default function ServicePage3() {
       <Faq />
       <Clients />
       <MarqueeComponent />
-      <Footer8 />
+      <Footer5 />
     </>
   );
 }

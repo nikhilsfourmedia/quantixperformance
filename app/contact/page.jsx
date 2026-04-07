@@ -3,7 +3,7 @@ import Breadcumb from "@/components/contact/Breadcumb";
 import Contact from "@/components/contact/Contact";
 import ContactInfo from "@/components/contact/ContactInfo";
 
-import Footer8 from "@/components/footers/Footer8";
+import Footer5 from "@/components/footers/Footer5";
 import Header3 from "@/components/headers/Header3";
 import React from "react";
 
@@ -15,13 +15,13 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <>
+    <div className="brand-theme">
       <Header3 />
       <Breadcumb />
       <ContactInfo />
       <Contact />
       <MarqueeComponent />
-      <Footer8 />
-    </>
+      <Footer5 />
+    </div>
   );
 }

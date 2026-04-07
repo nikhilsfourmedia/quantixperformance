@@ -6,10 +6,12 @@ import Nav from "./component/Nav";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
 export default function Header3() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleDocumentClick = (event) => {
       const menuWrapper = document.querySelector(".mobile-menu-wrapper");
@@ -22,30 +24,25 @@ export default function Header3() {
         !menuContainer.contains(event.target) &&
         menuWrapper.contains(event.target)
       ) {
-        // Your logic for handling the click outside modal-content
         setMobileMenuOpen(false);
       }
     };
 
-    // Attach the event listener when the component mounts
     document.addEventListener("click", handleDocumentClick);
 
-    // Detach the event listener when the component unmounts
     return () => {
       document.removeEventListener("click", handleDocumentClick);
     };
-  }, []); // Empty dependency array ensures the effect runs once after the initial render
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 500);
+      setIsScrolled(window.scrollY > 120);
     };
 
-    // Attach the event listener when the component mounts
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -70,11 +67,10 @@ export default function Header3() {
           <div className="mobile-logo">
             <Link scroll={false} href="/">
               <Image
-                height={86}
-                width={24}
-                style={{ width: "86px", height: "24px" }}
+                width={86}
+                height={24}
                 src="/assets/img/logo.svg"
-                alt="Ovation"
+                alt="Quantix Performance"
               />
             </Link>
           </div>
@@ -84,15 +80,19 @@ export default function Header3() {
             </ul>
           </div>
           <div className="sidebar-wrap">
-            <h6>27 Division St, New York,</h6>
-            <h6>NY 10002, USA</h6>
+            <h6>Golden Court, Shop 217, Above Zudio</h6>
+            <h6>Hills and Dales, Undri, Pune, India</h6>
           </div>
           <div className="sidebar-wrap">
             <h6>
-              <a href="tel:1800123654987">+1 800 123 654 987 </a>
+              <a href="mailto:hello@quantixperf.com">
+                hello@quantixperf.com
+              </a>
             </h6>
             <h6>
-              <a href="mailto:frisk.agency@mail.com">frisk.agency@mail.com</a>
+              <Link scroll={false} href="/contact">
+                Book a consultation
+              </Link>
             </h6>
           </div>
           <div className="social-btn style3">
@@ -116,7 +116,7 @@ export default function Header3() {
                         width={250}
                         height={70}
                         src="/assets/img/logo.svg"
-                        alt="logo"
+                        alt="Quantix Performance"
                       />
                     </Link>
                   </div>
@@ -142,10 +142,14 @@ export default function Header3() {
                 </div>
                 <div className="col-auto d-none d-lg-block">
                   <div className="header-button">
-                    <Link scroll={false} href="/project" className="btn">
+                    <Link
+                      scroll={false}
+                      href="/project"
+                      className="btn btn-border4 header3-plain-btn"
+                    >
                       <span className="link-effect">
-                        <span className="effect-1">WORKS WITH US</span>
-                        <span className="effect-1">WORKS WITH US</span>
+                        <span className="effect-1">Work with us</span>
+                        <span className="effect-1">Work with us</span>
                       </span>
                     </Link>
                   </div>

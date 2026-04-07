@@ -13,13 +13,13 @@ export const metadata = {
 
 export default function ServicePage1() {
   return (
-    <>
+    <div className="brand-theme">
       <Header3 />
       <Breadcumb />
       <Features1 />
       <Video />
       <MarqueeComponent />
       <Footer5 />
-    </>
+    </div>
   );
 }

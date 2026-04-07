@@ -9,25 +9,30 @@ export default function Footer5() {
     <footer className="footer-wrapper footer-layout5 overflow-hidden">
       <div className="footer-top space bg-theme">
         <div className="container">
-          <div className="row align-items-center justify-content-between">
-            <div className="col-lg-6">
-              <h2 className="footer-top-title">
-                Ready for more qualified B2B conversations?
-              </h2>
-            </div>
-            <div className="col-lg-5">
-              <div className="footer-top-wrap">
-                <p className="mb-30">
-                  Tell us about your market, goals, and timeline. We will reply
-                  with a clear plan for lead generation and performance
-                  marketing—no fluff.
-                </p>
-                <Link scroll={false} href="/contact" className="btn">
-                  <span className="link-effect">
-                    <span className="effect-1">CONTACT QUANTIX</span>
-                    <span className="effect-1">CONTACT QUANTIX</span>
-                  </span>
-                </Link>
+          <div className="home5-cta-card">
+            <div className="row align-items-center justify-content-between gy-4">
+              <div className="col-lg-7">
+                <span className="home5-cta-eyebrow">Growth partner for B2B teams</span>
+                <h2 className="footer-top-title">
+                  Ready for more qualified B2B conversations?
+                </h2>
+              </div>
+              <div className="col-lg-5">
+                <div className="footer-top-wrap">
+                  <p className="mb-30">
+                    Tell us about your market, goals, and timeline. We will
+                    reply with a clear plan for lead generation and performance
+                    marketing, no fluff.
+                  </p>
+                  <div className="home5-cta-actions">
+                    <Link scroll={false} href="/contact" className="btn">
+                      <span className="link-effect">
+                        <span className="effect-1">BOOK A CONSULTATION</span>
+                        <span className="effect-1">BOOK A CONSULTATION</span>
+                      </span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

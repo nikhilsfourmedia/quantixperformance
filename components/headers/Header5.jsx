@@ -146,8 +146,8 @@ export default function Header5() {
                       className="btn bg-theme text-title"
                     >
                       <span className="link-effect">
-                        <span className="effect-1">WORKS WITH US</span>
-                        <span className="effect-1">WORKS WITH US</span>
+                        <span className="effect-1">Work with us</span>
+                        <span className="effect-1">Work with us</span>
                       </span>
                     </Link>
                   </div>

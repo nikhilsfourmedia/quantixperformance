@@ -73,7 +73,7 @@ export default function Header4() {
               <Image
                 width={86}
                 height={24}
-                src="/assets/img/logo.png"
+                src="/assets/img/logo.svg"
                 alt="Quantix Performance"
               />
             </Link>

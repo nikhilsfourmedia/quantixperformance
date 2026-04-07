@@ -59,7 +59,7 @@ function HeroSlide({ bgImage, title, body, yearTagLines }) {
                 >
                   <Link
                     scroll={false}
-                    className="circle-btn style2 btn bg-theme text-title gsap-magnetic"
+                    className="circle-btn style2 btn bg-theme text-white gsap-magnetic"
                     href="/contact"
                   >
                     <span className="link-effect">
@@ -82,12 +82,6 @@ function HeroSlide({ bgImage, title, body, yearTagLines }) {
 }
 
 export default function Hero() {
-  useEffect(() => {
-    document.body.classList.add("bg-title");
-    return () => {
-      document.body.classList.remove("bg-title");
-    };
-  }, []);
   useEffect(() => {
     addGsap();
   }, []);

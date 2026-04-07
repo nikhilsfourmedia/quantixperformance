@@ -8,10 +8,10 @@ export default function Projects() {
     <div id="services" className="premium-projects-area overflow-hidden">
       <style>{`
         .premium-projects-area {
-          background: #000000;
+          background: #ffffff;
           position: relative;
           padding: 120px 0;
-          color: #fff;
+          color: #0a0c00;
         }
         .premium-projects-area::before {
           content: '';
@@ -20,29 +20,29 @@ export default function Projects() {
           left: -10%;
           width: 50%;
           height: 50%;
-          background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, rgba(0,0,0,0) 70%);
+          background: radial-gradient(circle, rgba(10, 49, 97, 0.12) 0%, rgba(255,255,255,0) 70%);
           border-radius: 50%;
           pointer-events: none;
         }
         .premium-title {
           font-size: 3.5rem;
           font-weight: 800;
-          background: linear-gradient(to right, #ffffff, #a5b4fc);
+          background: linear-gradient(to right, #0a0c00, #0a3161);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           margin-bottom: 24px;
           line-height: 1.2;
         }
         .premium-desc {
-          color: #9ca3af;
+          color: #4b5563;
           font-size: 1.125rem;
           max-width: 650px;
           margin: 0 auto;
           line-height: 1.6;
         }
         .premium-card {
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid rgba(255, 255, 255, 0.05);
+          background: #ffffff;
+          border: 1px solid rgba(10, 49, 97, 0.12);
           backdrop-filter: blur(24px);
           -webkit-backdrop-filter: blur(24px);
           border-radius: 24px;
@@ -54,16 +54,16 @@ export default function Projects() {
         }
         .premium-card:hover {
           transform: translateY(-12px);
-          background: rgba(255, 255, 255, 0.04);
-          border-color: rgba(255, 255, 255, 0.1);
-          box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(79, 70, 229, 0.15);
+          background: #ffffff;
+          border-color: rgba(10, 49, 97, 0.3);
+          box-shadow: 0 18px 40px rgba(10, 49, 97, 0.14);
         }
         .premium-img-wrap {
           border-radius: 16px;
           overflow: hidden;
           margin-bottom: 32px;
           position: relative;
-          background: #111;
+          background: #f7f9fc;
         }
         .premium-img-wrap img {
           width: 100%;
@@ -78,12 +78,12 @@ export default function Projects() {
         .premium-card-title {
           font-size: 1.75rem;
           font-weight: 700;
-          color: #f3f4f6;
+          color: #0a0c00;
           margin-bottom: 20px;
           transition: color 0.3s ease;
         }
         .premium-card:hover .premium-card-title {
-          color: #e0e7ff;
+          color: #0a3161;
         }
         .premium-tags {
           display: flex;
@@ -95,24 +95,24 @@ export default function Projects() {
           margin-top: auto;
         }
         .premium-tag {
-          background: rgba(99, 102, 241, 0.1);
-          color: #c7d2fe;
+          background: rgba(10, 49, 97, 0.08);
+          color: #0a3161;
           padding: 8px 16px;
           border-radius: 40px;
           font-size: 0.875rem;
           font-weight: 500;
           letter-spacing: 0.5px;
-          border: 1px solid rgba(99, 102, 241, 0.2);
+          border: 1px solid rgba(10, 49, 97, 0.24);
           transition: all 0.3s ease;
         }
         .premium-card:hover .premium-tag {
-          color: #ffffff;
-          background: rgba(99, 102, 241, 0.25);
-          border-color: rgba(99, 102, 241, 0.4);
+          color: #0a3161;
+          background: rgba(10, 49, 97, 0.15);
+          border-color: rgba(10, 49, 97, 0.36);
         }
         .premium-btn {
           display: inline-block;
-          background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+          background: linear-gradient(135deg, #0a3161 0%, #0f3d79 100%);
           color: #ffffff !important;
           padding: 16px 40px;
           border-radius: 50px;
@@ -122,11 +122,11 @@ export default function Projects() {
           transition: all 0.3s ease;
           border: none;
           text-decoration: none;
-          box-shadow: 0 10px 25px rgba(234, 88, 12, 0.35);
+          box-shadow: 0 10px 25px rgba(10, 49, 97, 0.28);
         }
         .premium-btn:hover {
           transform: translateY(-4px);
-          box-shadow: 0 15px 35px rgba(234, 88, 12, 0.5);
+          box-shadow: 0 15px 35px rgba(10, 49, 97, 0.4);
         }
       `}</style>
       <div className="container relative" style={{ zIndex: 2 }}>

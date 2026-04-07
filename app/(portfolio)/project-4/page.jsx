@@ -1,5 +1,5 @@
 import MarqueeComponent from "@/components/common/Marquee";
-import Footer8 from "@/components/footers/Footer8";
+import Footer5 from "@/components/footers/Footer5";
 import Header3 from "@/components/headers/Header3";
 import Breadcumb from "@/components/portfolio/Breadcumb";
 
@@ -15,7 +15,7 @@ export default function ProjectPage4() {
       <Breadcumb />
       <Projects4 />
       <MarqueeComponent />
-      <Footer8 />
+      <Footer5 />
     </>
   );
 }
