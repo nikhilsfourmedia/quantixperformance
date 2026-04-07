@@ -35,11 +35,20 @@ const highlights = [
 export default function Blogs() {
   return (
     <section className="blog-area space">
+      <style>{`
+        .blog-area .sec-title,
+        .blog-area .sec-text,
+        .blog-area .post-meta-item span,
+        .blog-area .blog-title a,
+        .blog-area .text-smoke {
+          color: #000000 !important;
+        }
+      `}</style>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xxl-7 col-xl-6 col-lg-8">
             <div className="title-area text-center">
-              <h2 className="sec-title  text-smoke">
+              <h2 className="sec-title text-smoke">
                 Why teams choose Quantix Performance
               </h2>
               <p className="sec-text mt-3 mb-0 text-smoke">
@@ -78,6 +87,7 @@ export default function Blogs() {
                     scroll={false}
                     href="/contact"
                     className="link-btn"
+                    style={{ color: "#000000" }}
                   >
                     <span className="link-effect">
                       <span className="effect-1">GET STARTED</span>
@@ -88,6 +98,7 @@ export default function Blogs() {
                       height={13}
                       src="/assets/img/icon/arrow-left-top.svg"
                       alt=""
+                      style={{ filter: "invert(1)" }}
                     />
                   </Link>
                 </div>
